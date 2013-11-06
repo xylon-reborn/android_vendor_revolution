@@ -25,7 +25,6 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-	vendor/revolution/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
 	vendor/revolution/prebuilt/bin/sysinit:system/bin/sysinit
 
 # userinit support
