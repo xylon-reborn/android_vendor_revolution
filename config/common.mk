@@ -2,7 +2,7 @@ PRODUCT_BRAND ?= Revolution
 
 # bootanimation
 PRODUCT_COPY_FILES += \
-        vendor/revolution/bootanimation.zip:system/media/bootanimation.zip
+        vendor/revolution/prebuilt/bootanimation.zip:system/media/bootanimation.zip
 
 # general properties
 PRODUCT_PROPERTIES_OVERRIDE += \
