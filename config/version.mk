@@ -29,5 +29,5 @@ endif
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=ORevolutionROM-$(ROM_VERSION) \
+	ro.modversion=RevolutionROM-$(ROM_VERSION) \
 	ro.revolution.version=$(ROM_VERSION)
