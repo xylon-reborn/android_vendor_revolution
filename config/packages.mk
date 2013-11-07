@@ -2,6 +2,8 @@
 PRODUCT_PACKAGES += \
 	Development \
 	LatinIME \
+	Music \
+	MusicFX \
 	VideoEditor \
 	VoiceDialer \
 	SoundRecorder \
