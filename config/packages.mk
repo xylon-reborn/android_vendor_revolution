@@ -4,6 +4,7 @@ PRODUCT_PACKAGES += \
 	Music \
 	MusicFX \
 	VoiceDialer \
+	XYPapers \
 	SoundRecorder
 
 # Additional apps

@@ -1,4 +1,4 @@
-# Revolution Extras
+# xylon Extras
 
 on init
     export TERMINFO /system/etc/terminfo

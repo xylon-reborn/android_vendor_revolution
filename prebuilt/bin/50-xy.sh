@@ -1,18 +1,16 @@
 #!/sbin/sh
-#
-# /system/addon.d/50-hosts.sh
-# During a firmware upgrade, this script backs up /system/etc/hosts,
+# 
+# /system/addon.d/50-xy.sh
+# During a CM10.1 upgrade, this script backs up /system/etc/hosts,
 # /system is formatted and reinstalled, then the file is restored.
 #
-# This script is primarily used as an example of how to use backuptool
-#
-# Originally implemented in CyanogenMod
 
 . /tmp/backuptool.functions
 
 list_files() {
 cat <<EOF
 etc/hosts
+etc/beerbong/properties.conf
 EOF
 }
 

@@ -1,8 +1,8 @@
-PRODUCT_BRAND ?= Revolution
+PRODUCT_BRAND ?= Xylon
 
 # bootanimation
 PRODUCT_COPY_FILES += \
-        vendor/revolution/prebuilt/bootanimation.zip:system/media/bootanimation.zip
+        vendor/xylon/prebuilt/bootanimation.zip:system/media/bootanimation.zip
 
 # general properties
 PRODUCT_PROPERTIES_OVERRIDE += \
@@ -22,32 +22,33 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/revolution/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/revolution/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/revolution/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/revolution/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/xylon/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/xylon/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/xylon/prebuilt/bin/50-xy.sh:system/addon.d/50-xy.sh \
+    vendor/xylon/prebuilt/bin/blacklist:system/addon.d/blacklist
 
-# init.d support
-PRODUCT_COPY_FILES += \
-	vendor/revolution/prebuilt/bin/sysinit:system/bin/sysinit
-
-# userinit support
-PRODUCT_COPY_FILES += \
-    vendor/revolution/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
-
-# Init script file with revolution extras
-PRODUCT_COPY_FILES += \
-    vendor/revolution/prebuilt/etc/init.local.rc:root/init.revolution.rc
-
+# Build.prop Modifications, Tweaks, blah.
+include vendor/aosp/config/buildprop_common.mk
+	
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# NFC
+PRODUCT_COPY_FILES += \
+    vendor/aosp/config/permissions/com.xylon.android.xml:system/etc/permissions/com.xylon.android.xml \
+    vendor/aosp/config/permissions/com.xylon.nfc.enhanced.xml:system/etc/permissions/com.xylon.nfc.enhanced.xml
+
+# SuperSU and sysrw
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+    vendor/aosp/prebuilt/common/xbin/sysro:system/xbin/sysro
+	
 # Additional packages
--include vendor/revolution/config/packages.mk
+-include vendor/xylon/config/packages.mk
 
 # Versioning
--include vendor/revolution/config/version.mk
+-include vendor/xylon/config/version.mk
 
 # Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/revolution/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/xylon/overlay/common
