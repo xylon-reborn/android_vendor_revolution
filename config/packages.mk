@@ -1,29 +1,16 @@
 # Additional packages
 PRODUCT_PACKAGES += \
-	LatinIME \
 	Music \
 	MusicFX \
-	VoiceDialer \
-	XYPapers \
-	SoundRecorder
-
-# Additional apps
-PRODUCT_PACKAGES += \
+	DSPManager \
+    libcyanogen-dsp \
 	audio_effects.conf
 
+# Superuser Packages
 PRODUCT_PACKAGES += \
-	CellBroadcastReceiver
-
-# Additional tools
+    Superuser \
+    su
+	
+# Xylon Packages
 PRODUCT_PACKAGES += \
-	openvpn \
-	e2fsck \
-	mke2fs \
-	tune2fs \
-	bash \
-	vim \
-	nano \
-	htop \
-	powertop \
-	lsof
-
+	XYPapers \
