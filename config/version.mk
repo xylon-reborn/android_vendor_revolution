@@ -16,5 +16,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=RevolutionROM-$(ROM_VERSION) \
-	ro.revolution.version=$(ROM_VERSION)
+	ro.modversion=XylonnROM-$(ROM_VERSION) \
+	ro.xylon.version=$(ROM_VERSION)

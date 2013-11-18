@@ -22,10 +22,10 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/xylon/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/xylon/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/xylon/prebuilt/bin/50-xy.sh:system/addon.d/50-xy.sh \
-    vendor/xylon/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/xylon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/xylon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/xylon/prebuilt/common/bin/50-xy.sh:system/addon.d/50-xy.sh \
+    vendor/xylon/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # Build.prop Modifications, Tweaks, blah.
 include vendor/xylon/config/buildprop_common.mk
@@ -41,8 +41,8 @@ PRODUCT_COPY_FILES += \
 
 # SuperSU and sysrw
 PRODUCT_COPY_FILES += \
-    vendor/xylon/prebuilt/xbin/sysrw:system/xbin/sysrw \
-    vendor/xylon/prebuilt/xbin/sysro:system/xbin/sysro
+    vendor/xylon/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+    vendor/xylon/prebuilt/common/xbin/sysro:system/xbin/sysro
 	
 # Additional packages
 -include vendor/xylon/config/packages.mk

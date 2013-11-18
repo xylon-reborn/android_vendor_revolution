@@ -6,11 +6,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Misc Files & init.d files
 PRODUCT_COPY_FILES +=  \
-    vendor/xylon/prebuilt/etc/init.local.rc:root/init.xylon.rc \
-    vendor/xylon/prebuilt/bin/sysinit:system/bin/sysinit
+    vendor/xylon/prebuilt/common/etc/init.local.rc:root/init.xylon.rc \
+    vendor/xylon/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # extras
 PRODUCT_COPY_FILES +=  \
-    vendor/xylon/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/xylon/prebuilt/etc/init.d/95zipalign:system/etc/init.d/95zipalign \
-    vendor/xylon/prebuilt/bin/zipalign:system/bin/zipalign
+    vendor/xylon/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
+    vendor/xylon/prebuilt/common/etc/init.d/95zipalign:system/etc/init.d/95zipalign \
+    vendor/xylon/prebuilt/common/bin/zipalign:system/bin/zipalign
