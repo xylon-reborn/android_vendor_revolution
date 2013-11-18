@@ -28,7 +28,7 @@ PRODUCT_COPY_FILES += \
     vendor/xylon/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # Build.prop Modifications, Tweaks, blah.
-include vendor/aosp/config/buildprop_common.mk
+include vendor/xylon/config/buildprop_common.mk
 	
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -36,13 +36,13 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/com.xylon.android.xml:system/etc/permissions/com.xylon.android.xml \
-    vendor/aosp/config/permissions/com.xylon.nfc.enhanced.xml:system/etc/permissions/com.xylon.nfc.enhanced.xml
+    vendor/xylon/config/permissions/com.xylon.android.xml:system/etc/permissions/com.xylon.android.xml \
+    vendor/xylon/config/permissions/com.xylon.nfc.enhanced.xml:system/etc/permissions/com.xylon.nfc.enhanced.xml
 
 # SuperSU and sysrw
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
-    vendor/aosp/prebuilt/common/xbin/sysro:system/xbin/sysro
+    vendor/xylon/prebuilt/xbin/sysrw:system/xbin/sysrw \
+    vendor/xylon/prebuilt/xbin/sysro:system/xbin/sysro
 	
 # Additional packages
 -include vendor/xylon/config/packages.mk
